@@ -6,7 +6,6 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [isSignIn, setIsSignIn] = useState(true);
@@ -19,7 +18,6 @@ const Login = () => {
     
 
     const dispatch = useDispatch();
-    const navigate = useNavigate()
 
     const email = useRef();
     const password = useRef();
@@ -50,12 +48,9 @@ const Login = () => {
                         displayName: fullName.current.value
                         }).then(() => {
                             dispatch(addUser({displayName : auth.currentUser.displayName, email: auth.currentUser.email}))
-                            navigate("/browse")
                         }).catch((error) => {
-
                             setErrorMsg(error.message);
-                        });
-
+                        }); 
                     })
                     .catch((error) => {
                         const errorCode = error.code;
@@ -70,7 +65,6 @@ const Login = () => {
                 signInWithEmailAndPassword(auth, email.current.value, password.current.value)
                     .then((userCredential) => {
                         dispatch(addUser({displayName : auth.currentUser.displayName, email: auth.currentUser.email}))
-                        navigate("/browse")
                     })
                     .catch((error) => {
                         setErrorMsg("Incorrect email or password!")
@@ -172,7 +166,7 @@ const Login = () => {
                             >{isSignIn ? "New to Netflix? " : "Already an User? "}
                                 <span
                                     className="hover:underline text-white font-semibold cursor-pointer"
-                                    onClick={() => { signUpHandle() }}
+                                    onClick={() => { signUpHandle(); setClicked(false) }}
                                 >{isSignIn ? "Sign Up" : "Sign In"} now.</span></p>
                         </form>
                     </div>
@@ -182,4 +176,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Login;
