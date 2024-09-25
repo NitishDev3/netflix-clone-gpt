@@ -11,3 +11,11 @@ export const MOVIES_OPTIONS = {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NzU0MmNlYjM1YTYxZGE1NGQ3YjdhZjFlYjE0ZGUzNyIsIm5iZiI6MTcyNTU3NDQwMy40MTM4NCwic3ViIjoiNjZkYTJiZmEwYjZjNDRlMTVhODdhMjI0Iiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.NeZXCsUXctPSyOTyz4DmspunmYNQORcz4FHAqiDWCqk'
     }
   };
+
+export const MOVIETILEURL = "https://image.tmdb.org/t/p/w500/"
+
+export const NOWPLAYING = "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1"
+
+export const POPULAR = "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1"
+
+export const PREFFERED_LANG = [{id: "english", name: "English"}, {id: "hindi", name: "हिंदी"}, {id:"spanish", name: "Spanish"}]

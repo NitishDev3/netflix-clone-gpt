@@ -67,7 +67,7 @@ const Login = () => {
                         dispatch(addUser({displayName : auth.currentUser.displayName, email: auth.currentUser.email}))
                     })
                     .catch((error) => {
-                        setErrorMsg("Incorrect email or password!")
+                        setErrorMsg(error.message)
                     });
             }
             else return;
