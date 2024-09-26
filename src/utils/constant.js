@@ -5,12 +5,12 @@ export const LOGO_URL = "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe
 export const AVATAR = "https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABRhunw1-HwxU3HlvmFM9UycO_VOxatA9nWQ4aaCKTCxOVOv5OchUTFO6RJznhN4G2scAmgXUpHzkkVdq9_8f9ui0RksluPFA3w.png?r=229"
 
 export const MOVIES_OPTIONS = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NzU0MmNlYjM1YTYxZGE1NGQ3YjdhZjFlYjE0ZGUzNyIsIm5iZiI6MTcyNTU3NDQwMy40MTM4NCwic3ViIjoiNjZkYTJiZmEwYjZjNDRlMTVhODdhMjI0Iiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.NeZXCsUXctPSyOTyz4DmspunmYNQORcz4FHAqiDWCqk'
-    }
-  };
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NzU0MmNlYjM1YTYxZGE1NGQ3YjdhZjFlYjE0ZGUzNyIsIm5iZiI6MTcyNTU3NDQwMy40MTM4NCwic3ViIjoiNjZkYTJiZmEwYjZjNDRlMTVhODdhMjI0Iiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.NeZXCsUXctPSyOTyz4DmspunmYNQORcz4FHAqiDWCqk'
+  }
+};
 
 export const MOVIETILEURL = "https://image.tmdb.org/t/p/w500/"
 
@@ -18,4 +18,7 @@ export const NOWPLAYING = "https://api.themoviedb.org/3/movie/now_playing?langua
 
 export const POPULAR = "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1"
 
-export const PREFFERED_LANG = [{id: "english", name: "English"}, {id: "hindi", name: "हिंदी"}, {id:"spanish", name: "Spanish"}]
+export const PREFFERED_LANG = [{ id: "english", name: "English" }, { id: "hindi", name: "हिंदी" }, { id: "spanish", name: "Spanish" }]
+
+
+export const GEMINI_KEY = "AIzaSyCk0KEN5XOOH_Ym4zpQUQGoXahyF9Zzhns";

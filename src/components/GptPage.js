@@ -7,7 +7,7 @@ const GptPage = () => {
     return (
         <div>
             <div
-                className="absolute opacity-100 -z-10"
+                className="fixed opacity-100 -z-10"
             ><img src={BG_IMG_URL} alt="" /></div>
             <GptSearchBar />
             <GptSuggestions />

@@ -2,6 +2,7 @@ import React from 'react'
 import { MOVIETILEURL } from '../utils/constant'
 
 const MovieTile = ({posterPath}) => {
+  if(!posterPath) return null;
   return (
     <div className='w-48 mx-[3px] my-2'>
         <img
